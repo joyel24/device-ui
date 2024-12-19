@@ -1872,7 +1872,7 @@ void create_screen_main_screen() {
                                         }
                                     }
                                 }
-                                {
+                                {//////////////////////////////
                                     // BasicSettingsResetButton
                                     lv_obj_t *obj = lv_btn_create(parent_obj);
                                     objects.basic_settings_reset_button = obj;
@@ -1892,57 +1892,11 @@ void create_screen_main_screen() {
                                             lv_obj_set_pos(obj, 0, 0);
                                             lv_obj_set_size(obj, LV_PCT(100), LV_SIZE_CONTENT);
                                             lv_label_set_long_mode(obj, LV_LABEL_LONG_DOT);
-                                            lv_label_set_text(obj, _("Configuration Reset"));
+                                            lv_label_set_text(obj, _("About"));
                                             lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                         }
                                     }
-                                }
-                            /*
-                            {////////////////////////////////////
-                                // SettingsResetPanel
-                                lv_obj_t *obj = lv_obj_create(parent_obj);
-                                objects.settings_reset_panel = obj;
-                                lv_obj_set_pos(obj, LV_PCT(3), LV_PCT(25));
-                                lv_obj_set_size(obj, 220, 120);
-                                lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
-                                add_style_settings_panel_style(obj);
-                                lv_obj_set_style_border_width(obj, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                lv_obj_set_style_radius(obj, 12, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                lv_obj_set_style_border_color(obj, lv_color_hex(0xff216ad8), LV_PART_MAIN | LV_STATE_DEFAULT);
-                                lv_obj_set_style_align(obj, LV_ALIGN_TOP_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                lv_obj_set_style_border_opa(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                lv_obj_set_style_layout(obj, LV_LAYOUT_NONE, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                {
-                                    lv_obj_t *parent_obj = obj;
-                                    {
-                                        // SettingsResetDropdown
-                                        lv_obj_t *obj = lv_dropdown_create(parent_obj);
-                                        objects.settings_reset_dropdown = obj;
-                                        lv_obj_set_pos(obj, 0, 0);
-                                        lv_obj_set_size(obj, 150, 30);
-                                        lv_dropdown_set_options(obj, _("NodeDB Reset\nFactory Reset"));
-                                        add_style_drop_down_style(obj);
-                                        lv_obj_set_style_align(obj, LV_ALIGN_TOP_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_border_color(obj, lv_color_hex(0xffe0e0e0), LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_pad_top(obj, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                    }
-                                    {
-                                        lv_obj_t *obj = lv_obj_create(parent_obj);
-                                        objects.obj16 = obj;
-                                        lv_obj_set_pos(obj, 0, 0);
-                                        lv_obj_set_size(obj, 160, 50);
-                                        lv_obj_set_style_pad_left(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_pad_top(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_pad_right(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_pad_bottom(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_bg_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        lv_obj_set_style_border_width(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                        create_user_widget_ok_cancel_widget(obj, 314);
-                                        lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                    }
-                                }
-                            }///////////////////////////////////////////////
-                            */
+                                }//////////////////////////////
                             }
                         }
                     }
