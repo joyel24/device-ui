@@ -1,7 +1,7 @@
 
-#include "UARTClient.h"
+#include "comms/UARTClient.h"
 #include "Arduino.h"
-#include "ILog.h"
+#include "util/ILog.h"
 
 #ifndef SERIAL_BAUD
 #define SERIAL_BAUD 38400
@@ -103,13 +103,13 @@ UARTClient::~UARTClient(){
 // --- convenience interface ---
 
 bool UARTClient::isActive(void) const
-{ 
+{
     time_t now;
     time(&now);
     return lastReceived > 0 && now - lastReceived < 60;
 }
 
-const char* UARTClient::getConnectionInfo(void) const
+const char *UARTClient::getConnectionInfo(void) const
 {
     static char connectionInfo[32];
 #ifdef SERIAL_RX

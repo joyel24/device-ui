@@ -31,7 +31,7 @@ This C++ library is intended to support the following scenarios with enhanced sc
 
 - Integrated with meshtastic firmware for LoRa devices with TFT display (or potentially also OLED +PSRAM)
 - Stand-alone TFT+MCU devices such as WT32-SC01, CYD or T-HMI connected with meshtastic LoRa devices
-- Linux based devices with LoRa shield, e.g Raspberry Pi / Milk-V Duo/Mars with TFT display (hat or diy)
+- Linux based devices with LoRa shield, e.g Raspberry Pi, Meshstick, Milk-V Duo/Mars with TFT display (hat or diy)
 - Native Linux X11 application with SimRadio e.g. for tests, GUI simulation & debugging (MQTT only application)
 
 <img src="docs/T-Deck.jpg" alt="scenario 1" width="205" height="150"><img src="docs/CYD.png" alt="scenario 2" width="220" height="150"><img src="docs/Pi400-TFT.jpg" alt="scenario 3" width="170" height="150"><img src="docs/X11.png" alt="scenario 4" width="230" height="150">
@@ -59,10 +59,10 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
         - [x] protobuf encoding/decoding
       - [x] Logging interface
       - [x] Add lvgl compatible input driver interface
-      - [ ] Add interface for persistency
-        - [X] Screen calibration data
+      - [x] Add interface for persistency
+        - [x] Screen calibration data
         - [x] Device settings (General)
-        - [ ] Message storage
+        - [x] Message storage
         - [ ] Serial connection config
     - [x] Dynamic behavior
       - [x] Startup config
@@ -80,25 +80,27 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
       - [x] Portuguese translation
       - [x] Netherlands translation
       - [x] Dutch translation
-      - [X] Italian translation
-      - [X] French translation
-      - [X] Russian translation
-      - [ ] Turkish translation
+      - [x] Italian translation
+      - [x] French translation
+      - [x] Russian translation
+      - [x] Slovenian translation
+      - [x] Turkish translation
       - [ ] Greek translation
     - [ ] Support dynamic OLED / Color(TFT) selection
     - [x] Add support for UI scaling and try eliminate fixed positioning (lvgl v9)
     - [ ] Allow co-existence of generated files/views by different eez-studio projects
     - [ ] Fix PSRAM draw buffer issue and do buffer size optimization
-    - [ ] Test native lvgl driver support
+    - [ ] Native lvgl driver support
       - [ ] TFT drivers
       - [ ] OLED drivers
-    - [ ] Check lvgl native driver DMA double-buffering
+    - [ ] lvgl native driver DMA double-buffering
     - [ ] E-Ink support
     - [ ] RP2040 support
 
 ### Meshtastic UI (general)
 
-    - [x] Boot Screen
+    - [x] Boot screen
+    - [ ] Customizable boot screen
     - [x] Home Screen
       - [x] Messages info
       - [x] Nodes info
@@ -115,7 +117,7 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
       - [ ] Repeater support (manual insertion)
       - [ ] LastHeard & time source handling improvements
       - [ ] Remote Node configuration
-      - [x] Filter (offline, unknown, public key, position, hops away, by name)
+      - [x] Filter (offline, unknown, channel, public key, position, hops away, by name)
       - [x] Highlight (position, telemetry, IAQ, by name)
     - [x] Group channel panel
     - [x] Chat panel
@@ -139,6 +141,7 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
         - [x] Device Role
         - [x] Screen Timeout
         - [x] Screen Calibration
+        - [x] Screen Lock
         - [x] Brightness
         - [x] Input Control
         - [x] Message Alert / Ringtones
@@ -169,8 +172,29 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
     - [x] Trackball support (e.g. fast scrolling list views)
     - [ ] SD card support, mainly for offline maps or import/export (config & chat history)
     - [ ] load custom fonts from SD card
+    - [ ] disable screen to temporarily allow other connection (USB serial, BT) to the device
     - [ ] (Optional): allow bluetooth connection (-> PhoneAPI queue re-design)
     - [ ] I2S Audio support
+
+### :pager: DIY Mesh-Tab (see <a href="[https://github.com/valzzu/Mesh-Tab]" target="_blank">https://github.com/valzzu/Mesh-Tab</a>)
+
+    - [x] Mesh-Tab firmware support (320x240 and 320x480)
+      - [x] Generic LGFX Display driver
+      - [x] platformio.ini integration
+    - [x] XPT2046 touch driver
+    - [x] FT6236 touch driver
+    - [x] 320x240 landscape view
+      - [x] 3.2" TN TFT ST7789 display + XPT2046 touch driver (resistive)
+      - [x] 3.2" IPS TFT ILI9341 display + XPT2046 touch driver (resistive)
+      - [x] 3.2" IPS TFT ILI9341 display + FT6236 touch driver (capacitive)
+    - [x] 240x480 portrait view (scaled)
+      - [x] 3.5" TN TFT ST7789 display + XPT2046 touch driver (resistive)
+      - [x] 3.5" IPS TFT ILI9341 display + XPT2046 touch driver (resistive)
+      - [x] 3.5" IPS TFT ILI9488 display + FT6236 touch driver (capacitive)
+      - [x] 4.0" IPS TFT ILI9488 display + FT6236 touch driver (capacitive)
+    - [x] PWM buzzer
+    - [ ] SD card support (resistive displays)
+    - [ ] SD card support (capacitive displays)
 
 ### :watch: T-Watch
 
@@ -205,9 +229,9 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
     - [x] Replicator support (esp32 + nrf52 radio)
       - [x] Display driver
       - [X] 480x480 view -> scaled 320x240
-    - [X] WT32-SC01 (Plus) support (480x320)
+    - [x] WT32-SC01 (Plus) support (480x320)
       - [x] Display driver
-      - [X] 480x320 view -> scaled 320x240
+      - [x] 480x320 view -> scaled 320x240
     - [ ] image size reduction
     - [ ] Fix/Workaround serial light sleep UART reading issue (-> firmware)
     - [ ] Heartbeat timer improvements
